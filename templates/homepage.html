@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Página Inicial</title>
+    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='logo.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
+    <meta name="theme-color" content="#111111">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#111111">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <header class="topbar">
+        <h1 class="title">Escolha o que deseja explorar:</h1>
+    </header>
+
+    <main>
+        <section class="grid" aria-label="Categorias">
+            <a class="card" href="{{ url_for('crafts') }}" aria-label="Ir para Crafts">
+                <video class="logo-video" autoplay loop muted playsinline preload="metadata"
+                    disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback nofullscreen"
+                    aria-label="Animação representando artesanato">
+                    <source src="{{ url_for('static', filename='crafts.mp4') }}" type="video/mp4" />
+                    <img src="{{ url_for('static', filename='crafts.jpg') }}" alt="Imagem representando artesanato" />
+                </video>
+                <div class="card-body">
+                    <h3>Produtos</h3>
+                    <p class="price">Lista de Produtos</p>
+                </div>
+            </a>
+
+            <a class="card" href="{{ url_for('musicas') }}" aria-label="Ir para Música">
+                <video id="logoVideo" class="logo-video" autoplay loop muted playsinline preload="metadata"
+                    disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback nofullscreen"
+                    aria-label="Animação representando música">
+                    <source src="{{ url_for('static', filename='musicas.mp4') }}" type="video/mp4" />
+                    <img src="{{ url_for('static', filename='musica.jpg') }}" alt="Imagem representando música" />
+                </video>
+                <div class="card-body">
+                    <h3>Midia</h3>
+                    <p class="price">Player de Música</p>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <small>© <span id="year"></span> — Selecione uma categoria para continuar.</small>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

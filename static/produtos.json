@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Fone Gamer",
+        "price": 200.0,
+        "img": "img_prod/fone.jpg",
+        "description": "Fone Gamer para jogos online."
+    },
+    {
+        "name": "Mouse Gamer",
+        "price": 170.0,
+        "img": "img_prod/mouse.jpg",
+        "description": "Mouse Gamer para jogos online."
+    },
+    {
+        "name": "Teclado Gamer",
+        "price": 250.0,
+        "img": "img_prod/teclado.jpg",
+        "description": "Teclado Gamer para jogos online."
+    },
+    {
+        "name": "Celular",
+        "price": 1850.0,
+        "img": "img_prod/celular.jpg",
+        "description": "Celular intermediário."
+    },
+    {
+        "name": "Notebook",
+        "price": 3000.0,
+        "img": "img_prod/notebook.jpg",
+        "description": "Notebook básico para tarefas do dia a dia (estudo e trabalho)."
+    }
+]

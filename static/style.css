@@ -1,0 +1,509 @@
+/* Reset / base (legacy simplistic styles removed or merged) */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+/* Estilo para a barra de navegação */
+nav {
+    /* Posiciona a barra no topo da tela, mesmo ao rolar */
+    position: sticky;
+    top: 0;
+
+    /* Garante que ocupe a largura total da página */
+    width: 100%;
+
+    /* Alinha os itens em uma linha e os espaça */
+    display: flex;
+    justify-content: space-around;
+    /* Distribui o espaço entre os itens */
+    align-items: center;
+    /* Alinha os itens verticalmente */
+
+    /* Adiciona mais espaço interno e visual */
+    padding: 15px 0;
+    /* 15px em cima/embaixo, 0 nas laterais */
+    background-color: cadetblue;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Sombra para dar profundidade */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    /* Aumenta o tamanho da fonte */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.logo-video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    pointer-events: none;
+    /* evita clique acidental */
+    /* opcional: brilho sutil */
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, .06));
+
+}
+
+:root {
+    --bg: #000000;
+    --card: #1282a2;
+    --text: #fefcfb;
+    --muted: #8d99ae;
+    --accent: #1282a2;
+    --accent2: #034078;
+    --border: #001f54;
+    --shadow: #001f54;
+    --danger: #e63946;
+    /* added */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 0 16px 48px;
+
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    width: fit-content;
+}
+
+
+.title {
+    font-size: 2.5em;
+    margin: 0;
+    color: var(--accent);
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.breadcrumb {
+    font-size: 1em;
+    color: var(--muted);
+    margin-bottom: 24px;
+    margin-top: 24px;
+    display: flex;
+    gap: 8px;
+}
+
+.breadcrumb a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.product-card {
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--card);
+    border-radius: 28px;
+    box-shadow: 0 8px 32px var(--shadow);
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-image-wrap {
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
+    min-height: 320px;
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px var(--shadow);
+    background: var(--card);
+}
+
+.product-info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: calc(100% - 320px);
+    padding-left: 1rem;
+}
+
+.product-title {
+    font-size: 2.7em;
+    margin-bottom: 18px;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.product-description {
+    color: var(--text);
+    margin-bottom: 32px;
+    font-size: 1.15em;
+    line-height: 1.6;
+}
+
+.product-price {
+    font-size: 2.2em;
+    color: var(--text);
+    margin-bottom: 28px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.buy-btn {
+    background: linear-gradient(27deg, var(--accent) 0%, var(--accent2) 100%);
+    color: #fff;
+    border: none;
+    padding: 18px 56px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 8px 32px var(--shadow);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.buy-btn:hover {
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent2) 100%);
+    transform: scale(1.04);
+}
+
+@media (max-width: 900px) {
+    .product-card {
+        flex-direction: column;
+        padding: 24px;
+        gap: 24px;
+    }
+
+    .product-image {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+.not-found {
+    width: 100%;
+    text-align: center;
+    padding: 48px 0;
+}
+
+.not-found h1 {
+    font-size: 2.2em;
+    color: var(--accent);
+    margin-bottom: 18px;
+}
+
+.not-found p {
+    color: var(--muted);
+    font-size: 1.1em;
+    margin-bottom: 24px;
+}
+
+header {
+    max-width: 1400px;
+    margin: 24px auto 8px;
+}
+
+.topbar {
+    max-width: 1400px;
+    margin: 24px auto 8px;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.topbar h1 {
+    margin: 0 0 12px;
+}
+
+/* Unified form controls (flex + wrap) */
+form.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    background: #011627;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px -4px rgba(0, 0, 0, .5);
+}
+
+form.controls input[type=text] {
+    flex: 2 1 220px;
+    background: #02284a;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 10px 12px;
+    border-radius: 8px;
+    font: inherit;
+    outline: none;
+}
+
+form.controls input[type=text]:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px #1282a233;
+}
+
+form.controls select {
+    flex: 1 1 160px;
+    background: #02284a;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 10px;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.btn {
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    border: none;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 24px;
+    cursor: pointer;
+    font: 600 0.95rem/1 inter;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: .5px;
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.hint {
+    color: var(--muted);
+    margin: 10px 0 0;
+}
+
+.grid {
+    max-width: 1200px;
+    margin: 20px auto 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 32px var(--shadow);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 260px;
+    text-decoration: none;
+    width: 100%;
+    aspect-ratio: 1/1;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+}
+
+/* Added from snippet: ensure videos inside cards follow same sizing as images */
+.card video {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+}
+
+.cover-placeholder {
+    background: linear-gradient(135deg, #02284a, #034078);
+    width: 100%;
+    aspect-ratio: 4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: .8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.card-body {
+    padding: .75rem;
+    flex: 1;
+    /* absolute */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.card-body h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.2;
+}
+
+.price {
+    margin: 0;
+    font-weight: 400;
+    color: #e0fbfc;
+    font-size: .9rem;
+}
+
+audio {
+    width: 100%;
+    height: 38px;
+}
+
+/* Player styles added from snippet (unique selectors) */
+.player {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #181818;
+    border-top: 1px solid #333;
+    padding: .75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.player button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.player .track-info {
+    flex: 1;
+    overflow: hidden;
+}
+
+.player .track-info strong {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.player input[type=range] {
+    flex: 2;
+}
+
+.album-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Fallback for browsers that don't support aspect-ratio:
+   Treat non-img .album-cover as a square container and ensure any inner img fills it. */
+.album-cover:not(img) {
+    height: 0;
+    padding-top: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.album-cover:not(img) img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.empty {
+    grid-column: 1/-1;
+    background: #02284a;
+    border: 1px dashed var(--border);
+    padding: 32px 24px;
+    text-align: center;
+    border-radius: 14px;
+    color: var(--muted);
+}
+
+.foot {
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    padding: 0 16px;
+    color: var(--muted);
+    font-size: .75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.back-link {
+    color: var(--accent);
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background: #f5f9ff;
+        color: #09121a;
+    }
+
+    .card {
+        box-shadow: 0 4px 18px -4px #001f54aa;
+    }
+}

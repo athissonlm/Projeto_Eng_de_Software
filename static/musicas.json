@@ -1,0 +1,14 @@
+[
+    {
+        "nome": "MTG",
+        "artista": "DJ WS",
+        "caminho_arquivo": "mp3_mus/mtg.mp3",
+        "capa": "img_mus/mtg.jpg"
+    },
+    {
+        "nome": "Vida",
+        "artista": "Racionais MCs",
+        "caminho_arquivo": "mp3_mus/vida.mp3",
+        "capa": "img_mus/racionais.jpg"
+    }
+]
